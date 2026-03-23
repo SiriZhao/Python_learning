@@ -18,35 +18,38 @@
 
 # Python 编程进阶之路 (Python-Learning-Journey)
 
-这个仓库记录了我从 Python 基础语法到进阶爬虫实战的学习历程。代码涵盖了逻辑控制、算法优化、函数式编程及自动化数据采集等多个模块。
+这个仓库是我系统学习 Python 的实战记录，涵盖了从零基础语法到进阶网络爬虫的完整过程。
 
-## 📂 模块说明
+## 📂 项目模块说明
 
-### 🎮 01. 基础逻辑与算法游戏 (Basic Logic & Games)
-探索 Python 的循环、条件分支以及经典的算法实现。
-* **猜数字系列**: 包含从基础的用户交互版 `guess_num_human.py` 到基于二分查找算法的 AI 自动猜测版 `guess_num_ai_advanced.py`。
-* **二分查找**: `binary_search_logic.py` 展示了如何通过数学逻辑将 $O(n)$ 的搜索复杂度降低至 $O(\log n)$。
-* **逻辑练习**: `reverse_9x9_table.py`（嵌套循环应用） 与 `list_custom_ops.py`（手动实现列表清空与深度倒序逻辑）。
+### 🎮 01. 算法练习与益智游戏 (Algorithms & Games)
+* **二分查找系列**: 
+    * `guess_num_ai_advanced.py`: 模拟 AI 使用二分法在千万级数据中精准定位目标。
+    * `binary_search_logic.py`: 封装了标准的二分查找函数，支持自定义区间与返回值解包。
+* **人机交互**: `guess_num_human.py` 包含异常处理机制的经典猜数字游戏。
 
-### 🛠️ 02. 系统设计与实用工具 (System Tools)
-模拟真实业务场景，练习函数封装与异常处理。
-* **业务系统**: `member_recharge_system.py` 模拟了包含多级优惠和新老用户福利的会员充值逻辑。
-* **健康管理**: `bmi_health_analyzer.py` 使用类型注解（Type Hinting）编写的健壮 BMI 计算器。
-* **高阶函数**: `callback_progress_wrapper.py` 演示了如何将函数作为参数传递（回调机制），实现动态任务进度监控。
+### 🛠️ 02. 系统设计与实用工具 (System & Tools)
+* **高阶函数实战**: `callback_wrapper_demo.py` 演示了如何将函数作为参数传递，实现任务完成后的自动回调。
+* **业务逻辑模拟**: `member_recharge_system.py` 模拟复杂的会员充值算法，包含新老客户判定及多级赠送逻辑。
+* **健康分析**: `bmi_health_analyzer.py` 使用类型注解实现的 BMI 计算工具。
+* **动态进度条**: `simple_progress_bar.py` 利用 `\r` 实现的控制台动态刷新进度条。
 
-### 🕷️ 03. 网络爬虫与数据自动化 (Web Spiders)
-利用 Python 进行高效的数据采集与分析。
-* **Bilibili API 爬虫**: 自动获取视频列表数据并导出为结构化的 Excel 文档。
-* **豆瓣电影爬虫**: 实现了一个具备 **Session 会话管理**、**自动重试机制** 以及 **本地 JSON 缓存（断点续爬）** 功能的高阶爬虫脚本。
+### 🕷️ 03. 网络爬虫与数据处理 (Web Spiders)
+* **Bilibili 数据采集**: `bilibili_video_spider.py` 抓取 B 站 API 数据，利用 `pandas` 处理时间戳并导出 Excel。
+* **豆瓣电影爬虫**: `douban_movie_spider.py` 具备 **Session 会话管理**、**自动重试**及**断点续爬（JSON 缓存）**功能的高阶爬虫。
 
-## 🚀 技术要点
-* **鲁棒性**: 广泛使用 `try-except` 处理非标准输入，确保程序不会因异常中断。
-* **自动化**: 结合 `pandas` 和 `openpyxl` 实现了从网络数据抓取到本地表格存储的全自动化流程。
-* **性能意识**: 在 AI 猜数字项目中引入了二分查找，并对比了理论最优猜测次数。
+### 📚 04. 基础逻辑沉淀 (Syntax Foundation)
+* **循环应用**: `reverse_9x9_table.py` 倒序九九乘法表。
+* **数列操作**: `list_custom_ops.py` 手动实现列表清空逻辑与子列表嵌套倒序排列。
 
-## 🛠️ 环境依赖
-* Python 3.8+
-* 第三方库: `requests`, `pandas`, `beautifulsoup4`, `openpyxl`
+## 🚀 技术亮点
+1. **健壮性**: 广泛应用 `try-except` 捕获无效输入和网络请求异常。
+2. **算法意识**: 通过猜数字项目实践了二分查找，理解了 $O(\log n)$ 的效率优势。
+3. **工程化思维**: 在爬虫项目中引入了缓存机制和 Session 持久化，有效应对反爬。
+
+## 🛠️ 环境准备
+1. 安装 Python 3.8+
+2. 安装依赖：`pip install requests pandas beautifulsoup4 openpyxl`
 
 ## ⚖️ 免责声明
 本仓库中的爬虫脚本仅用于个人学习和技术研究。请勿用于商业用途或大规模高频抓取，使用时请遵守相关平台的 `robots.txt` 协议。
