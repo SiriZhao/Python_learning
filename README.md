@@ -12,5 +12,5 @@
 - IDE: VS Code 
 
 ### 📂 文件说明
-* [Notes.py](Notes/Notes.py) - Python 基础
+* [Notes_basic.py](Notes/Notes.py) - Python 基础
 * [Notes_Advanced.py](Notes/Notes_Advanced.py) - 面向对象编程
